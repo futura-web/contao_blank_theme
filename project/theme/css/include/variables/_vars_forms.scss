@@ -1,0 +1,20 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ----------------------------------------------- VARS FORMS ----- */
+
+$heightFormElement: $sizeBasic * 2;
+$fontForm: $fontFamSerif;
+$sizeLabel: $sizeBasic;
+$formWidthMax: inherit;
+$inputPadding: .5rem;
+$borderForm: .5px solid $colorBorder;
+$bgForm: $white;

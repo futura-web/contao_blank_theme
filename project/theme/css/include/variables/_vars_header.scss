@@ -1,0 +1,42 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ----------------------------------------------- VARS HEADER ----- */
+
+$headerPaddingBasic: 1.25rem;
+$headerPadding: $headerPaddingBasic 0;
+$headerPaddingTop: $headerPaddingBasic;
+$headerPaddingBottom: $headerPaddingBasic;
+
+$logoHeight: 70%;
+$logoFontSize: 1rem;
+$logoHeightLine: 1;
+
+//$heightHeader: $headerPaddingBasic + $headerPaddingBasic + $logoHeight;
+
+$heightHeader: 5rem;
+
+$bgHeader: $transpa;
+
+$colorHeader: $black;
+$colorLinkHeader: $colorLink;
+$colorLinkActiveHeader: $colorLinkActive;
+$colorLinkHoverHeader: $colorLinkHover;
+
+$bgNavMain: $bgHeader;
+$NavMainFontSize: 1rem;
+$NavMainLineHeight: 1.25;
+$navMainFromTop: translate3d(0, -120%, 0);      //fly-in-out from-to top
+$navMainFromRight: translate3d(120%, 0, 0);	    //fly-in-out from-to right
+$navMainFromBottom: translate3d(0, 120%, 0);    //fly-in-out from-to bottom
+$navMainFromLeft: translate3d(-120%, 0, 0);     //fly-in-out from-to left
+
+$colorHamburger: $colorHeader;

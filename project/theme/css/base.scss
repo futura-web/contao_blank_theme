@@ -1,0 +1,437 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* --------------------------------------------------------- IMPORT VARIABLES ----- */
+
+@import include/_variables;
+
+/* --------------------------------------------------------- IMPORT CSS-RESET ----- */
+
+@import include/_reset;
+
+/* --------------------------------------------------------- IMPORT FONTFACE ----- */
+
+@import include/_fontface;
+
+/* --------------------------------------------------------- DEFAULT SETTINGS ----- */
+
+//	Changes the padding behaviour of all elements
+//	More info:	https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+//	Mehr Infos:	https://developer.mozilla.org/de/docs/Web/CSS/box-sizing
+*	{box-sizing: border-box;}
+
+html, body{
+	min-height: 100%;				//	Needed for the CSS-Sticky footer by flexbox
+	display: flex;					//	Needed for the CSS-Sticky footer by flexbox
+	flex-direction: column;			//	Needed for the CSS-Sticky footer by flexbox
+}
+
+
+//	Scale the sizes of your content using "rem"
+html{
+	font-size: 80%;
+	scroll-behavior: smooth;
+//	letter-spacing: inherit;
+}
+
+
+// Set the default font- & body-settings
+body{
+	flex-grow: 1;					//	Needed for the CSS-Sticky footer by flexbox
+	color: black;
+	font-weight: 300;
+//	background-color: $bgBody;		// css -> include -> variables -> _vars_sizes
+	@import include/_systemfont;
+}
+
+.mod_article,
+.block{
+	position: relative;
+	margin-bottom: $spaceBasic;		// css -> include -> variables -> _vars_content
+
+	&.last,
+	> :last-child{
+		margin-bottom: 0;
+	}
+}
+
+
+/* --------------------------------------------------------- IMPORT STYLES ----- */
+
+@import include/_typography;
+@import include/_anchors;
+@import include/_iframes;
+@import include/_forms;
+@import include/_extensions;
+@import include/_classes;
+
+/* --------------------------------------------------------- WRAPPER ----- */
+
+#wrapper{
+	width: 100%;					//	Needed for the CSS-Sticky footer by flexbox
+	min-height: 100%;				//	Needed for the CSS-Sticky footer by flexbox
+	display: flex;					//	Needed for the CSS-Sticky footer by flexbox
+	flex-grow: 1;					//	Needed for the CSS-Sticky footer by flexbox
+	flex-direction: column;			//	Needed for the CSS-Sticky footer by flexbox
+}
+
+/* --------------------------------------------------------- WRAPPER END ----- */
+
+/* --------------------------------------------------------- HEADER ----- */
+
+#header{
+	width: 100%;
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $white;		// css -> include -> variables -> _vars_colors
+	z-index: 3;
+
+	.inside{
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@extend %centered;			// css -> include -> _extensions
+
+//	Use this if your responsive .nav_main flies in from top to bottom,
+//	to make it look like it transits beneath the #header -> default!
+		// &::after{
+		// 	content: "";
+		// 	width: 100%;
+		// 	height: $heightHeader;
+		// 	position: fixed;
+		// 	top: 0;
+		// 	left: 0;
+		// 	background-color: $bgHeader;
+		// 	z-index: 2;
+		// }
+	}
+}
+
+/* --------------------------------------------------------- HEADER END ----- */
+
+/* --------------------------------------------------------- LOGO ----- */
+
+.logo{
+	align-self: center;
+
+	a{
+		display: block;
+		color: $black;				// css -> include -> variables -> _vars_colors
+		font-size: 1.3rem;
+		text-decoration: none;
+		line-height: 1;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+/* --------------------------------------------------------- LOGO END ----- */
+
+/* --------------------------------------------------------- HAMBURGER ----- */
+
+@import include/_hamburger;
+
+/* --------------------------------------------------------- HAMBURGER END ----- */
+
+/* --------------------------------------------------------- NAV MAIN ----- */
+
+.nav_main{
+	width: 100%;
+	height: calc(100% - #{$heightHeader});		// css -> include -> variables -> _vars_header
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+    position: fixed;
+    top: $heightHeader;							// css -> include -> variables -> _vars_header
+    right: 0;
+    transform: $navMainFromTop;					//Change the last syllable to choose the fly-in-out direction -> deafult: ...Top
+	transition: transform .4s ease-out .1s;
+    overflow-y: auto;
+    //background-color: $bgNavMain;				// css -> include -> variables -> _vars_header
+    z-index: 1;
+
+    &.out{
+	    transform: translate3d(0, 0, 0);
+	}
+
+	.level_1{
+		align-self: center;
+	}
+
+	ul{
+		margin: 0;
+	}
+
+	li{
+		text-transform: uppercase;
+
+		&.home{
+			@extend %invisible;
+		}
+
+		&.trail{
+
+			a{
+				color: $colorLinkActiveHeader;	// css -> include -> variables -> _vars_header
+			}
+		}
+	}
+
+	a{
+		display: block;
+		color: $colorLinkHeader;				// css -> include -> variables -> _vars_header
+		text-decoration: none;
+		position: relative;
+
+		&:hover{
+			color: $colorLinkHoverHeader;		// css -> include -> variables -> _vars_header
+		}
+	}
+
+	strong{
+		color: $colorLinkActiveHeader;			// css -> include -> variables -> _vars_header
+		font-weight: 300;
+		position: relative;
+	}
+
+	span, strong{
+		width: auto;
+		font-size: $NavMainLineHeight;			// css -> include -> variables -> _vars_header
+		line-height: 1.75;
+		display: block;
+	}
+}
+
+/* --------------------------------------------------------- NAV MAIN END ----- */
+
+/* --------------------------------------------------------- CONTAINER ----- */
+
+#container{
+  	flex: 1;									//	Needed for the CSS-Sticky footer by flexbox
+	position: relative;
+	z-index: 2;
+
+	&::before{
+		content: "";
+		width: 100%;
+		height: $heightHeader;					// css -> include -> variables -> _vars_header
+		display: block;
+	}
+}
+
+/* --------------------------------------------------------- CONTAINER END ----- */
+
+/* --------------------------------------------------------- MAIN ----- */
+
+#main{
+
+	> .inside{
+		padding-bottom: $contentSpace;			// css -> include -> variables -> _vars_content
+	}
+}
+
+.mod_article{
+
+    &.banner {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        >.block {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            position: static;
+        }
+
+        .image_container {
+            width: 102%;
+            height: 102%;
+            position: absolute;
+            top: -1%;
+            left: -1%;
+            z-index: -1;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            max-width: inherit;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            max-width: $widthMain;				// css -> include -> variables -> _vars_content
+            margin-left: auto;
+            margin-right: auto;
+        }
+	}
+
+	&.parallax_single_img {
+		height: 50vh;
+		min-height: inherit;
+	
+		.image_container {
+			transition: transform linear .15s;
+		}
+
+		img{
+			top: 0;
+			transform: translateX(-50%);
+			opacity: 0;
+			
+			&.done{
+				opacity: 1;
+				transition: opacity .2s linear .15s;
+			}
+		}
+	}
+}
+
+/* --------------------------------------------------------- MAIN END ----- */
+
+/* --------------------------------------------------------- CE_IMAGE ----- */
+
+// .ce_image{}
+
+/* --------------------------------------------------------- CE_IMAGE END ----- */
+
+/* --------------------------------------------------------- CE_LIST ----- */
+
+//.ce_list{}
+
+/* --------------------------------------------------------- CE_LIST END ----- */
+
+
+/* --------------------------------------------------------- CE_TEXT ----- */
+
+//.ce_text{}
+
+/* --------------------------------------------------------- CE_TEXT END ----- */
+
+/* --------------------------------------------------------- CE_EVENT ----- */
+
+//@import include/_events;
+
+/* --------------------------------------------------------- CE_EVENT END ----- */
+
+/* --------------------------------------------------------- IMPORT SLIDER ----- */
+
+@import include/_slider_init;
+
+@import include/_slider;
+
+@import include/_fader;
+
+@import include/_modal;
+
+@import include/_slider_controls;
+
+@import include/_slider_dots;
+
+/* --------------------------------------------------------- IMPORT SLIDER END ----- */
+
+/* --------------------------------------------------------- FLEXIBLE BACKGROUNDS ----- */
+
+//@import include/_backgrounds;
+
+// Usage:
+
+// .bg_gray {
+
+//     &::after {
+//         background-color: $gray;
+//     }
+// }
+
+/* --------------------------------------------------------- FLEXIBLE BACKGROUNDS END ----- */
+
+/* --------------------------------------------------------- SINGLE ELEMENTS ----- */
+
+//.back{margin-bottom: $spaceBasic;}
+
+/* --------------------------------------------------------- SINGLE ELEMENTS END ----- */
+
+@import include/_gallery;
+// @import include/_pagination;
+// @import include/_comments;
+
+/* --------------------------------------------------------- FOOTER ----- */
+
+#footer{
+//	color: $colorFooter;
+//	background-color: $bgFooter;
+	z-index: 2;
+
+	.inside{
+		@extend %centered;
+//		padding: $footerSpacer;
+	}
+
+	nav,
+	ul{
+		margin-bottom: 0;
+	}
+
+	li{
+		display: block;
+
+		a, strong, span{
+			display: block;
+		}
+	}
+
+	li, p{
+		font-size: $sizeText;
+		line-height: 2;
+		margin: 0;
+	}
+
+	a{
+		text-decoration: none;
+
+		&:hover{
+			color: $colorLinkHover;
+		}
+	}
+
+	a, strong{
+		font-weight: 300;
+//		color: $colorFooter;
+	}
+}
+
+/* --------------------------------------------------------- FOOTER END ----- */
+
+/* --------------------------------------------------------- EXTRA ----- */
+
+@import include/_cookie;
+@import include/_autoscroll;
+
+/* --------------------------------------------------------- EXTRA END ----- */

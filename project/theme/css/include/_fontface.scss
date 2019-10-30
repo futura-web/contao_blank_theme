@@ -1,0 +1,33 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* --------------------------------------------------------- FONT-FACE ----- */
+
+/*
+*
+* To avoid using Google Fonts, choose your font(s) @
+*
+* https://google-webfonts-helper.herokuapp.com/fonts
+*
+* insert "fonts/" in the "Customize folder prefix (optional)"-text-input
+*
+* download your package
+*
+* insert your fonts straight into the "/css/fonts/" folder
+*
+* copy & paste your fonts-css-code below this comment
+*
+*/
+
+@font-face{
+    font-family: 'Impact';
+    src: url('fonts/impact/impact.ttf');
+}

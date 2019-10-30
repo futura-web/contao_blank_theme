@@ -1,0 +1,44 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* --------------------------------------------------------- PAGINATION ----- */
+
+.pagination{
+
+
+	p, ul{
+		margin: 0 auto $spaceBasic;
+	}
+
+
+	ul{
+		display: flex;
+		margin: 0 auto;
+	}
+
+
+	li{
+		margin: 0 1px 0 0;
+	}
+
+
+	span{
+		font-size: $sizeText;
+		text-decoration: none;
+		line-height: 2;
+		display: block;
+		padding: 0 .75rem .1rem;
+		border-radius: $borderRadius;
+		background-color: $transpa;
+	}
+}
+
+/* --------------------------------------------------------- PAGINATION END ----- */

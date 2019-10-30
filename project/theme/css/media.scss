@@ -1,0 +1,159 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*
+*/
+
+@import include/_variables;
+
+/* --------------------------------------------------------- @media (min-width: 480px) ----- */
+
+//@media (min-width: 480px){}
+
+/* --------------------------------------------------------- @media (min-width: 640px) ~ "m" ----- */
+
+@media (min-width: 640px){
+
+	html{
+		font-size: 85%;
+	}
+}
+
+/* --------------------------------------------------------- @media (min-width: 800px) ----- */
+
+@media (min-width: 800px){
+
+	html{
+		font-size: 90%;
+	}
+}
+
+/* --------------------------------------------------------- @media (min-width: 960px) ~ "l" ----- */
+
+@media (min-width: 960px){
+
+	html{
+		font-size: 95%;
+	}
+}
+
+/* --------------------------------------------------------- @media (min-width: 1280px) ~ "xl" ----- */
+
+@media (min-width: 1280px){
+
+	html{
+		font-size: 100%;
+	}
+
+	.hamburger{
+		display: none;
+	}
+
+	#header{
+
+		.inside{
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+
+			&::after{
+				content: none;
+			}
+		}
+	}
+
+	/* --------------------------------------------------------- LOGO ----- */
+
+	.logo{
+		width: auto;
+	}
+
+	/* --------------------------------------------------------- LOGO END ----- */
+
+	/* --------------------------------------------------------- NAV MAIN ----- */
+
+	.nav_main{
+		display: block;
+		position: static;
+		width: auto;
+		height: auto;
+		align-self: center;
+    	transform: translate3d(0, 0, 0);
+
+    	a, strong{
+    		display: inline-block;
+    	}
+
+	    .level_1{
+			display: flex;
+
+	    	> li{
+			//	float: left;
+
+	    		a, strong{
+	    			position: relative;
+	    			z-index: 2;
+	    		}
+
+	    		&:hover{
+
+	    			.level_2{
+	    				// transform: translateY(0);
+	    				// opacity: 1;
+	    			}
+	    		}
+	    	}
+	    }
+
+	    li{
+			position: relative;
+
+	    	&:not(.last){
+	    		padding: 0 1.25rem 0 0;
+	    	}
+
+		    span, strong{
+		    	font-size: 1rem;
+		    	display: inline-block;
+		    }
+	    }
+
+	    .level_2{
+	    //	min-width: calc(100% + 1.25rem);
+	    	padding: 0 0 0 1.25rem;
+	    //	position: absolute;
+	    //	top: 100%;
+	    //	left: -1.25rem;
+	    //	transform: translateY(-100%);
+	    //	opacity: 0;
+	    //	z-index: -1;
+		//	.transition(all .4s ease .3s);
+
+	    	li{
+	    		width: 100%;
+	    		position: relative;
+
+			    &.active{
+
+			    	strong{
+				    }
+			    }
+	    	}
+
+			strong{
+
+				&::after{
+					content: none;
+				}
+			}
+	    }
+	}
+
+	/* --------------------------------------------------------- MAIN NAV END ----- */
+}

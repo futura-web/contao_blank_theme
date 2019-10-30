@@ -1,0 +1,34 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ------------------------------------ VARS COLORS ----- */
+
+$white: #fff; // white
+$black: #000; // black
+
+$transpa: transparent; // transparent
+$colorError: #FC4349; // red
+
+$colorHamburger: $black;
+
+$colorPrimary: $black;
+$colorSecondary: $black;
+$colorAlternative: $black;
+
+$colorLink: blue;
+$colorLinkActive: red;
+$colorLinkHover: green;
+$colorLinkVisited: violet;
+
+$linkColor: $colorSecondary;
+$linkHoverColor: $colorPrimary;
+
+$bgLightbox: $black;

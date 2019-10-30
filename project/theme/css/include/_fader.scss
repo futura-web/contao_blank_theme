@@ -1,0 +1,45 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*
+*/
+
+/* --------------------------------------------------------- FADER ----- */
+
+.slider-wrapper{
+
+    .fader &{
+
+        > .block{
+            transition: opacity .3s ease-in-out;
+
+            &:first-of-type{
+                position: relative;
+            }
+
+            &.active{
+                opacity: 1;
+                z-index: 3;
+            }
+        }
+
+        .navigate &{
+
+            > .block{
+
+                &.targeted{
+                    opacity: 1;
+                    z-index: 5;
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------- FADER END ----- */

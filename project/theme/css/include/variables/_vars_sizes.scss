@@ -1,0 +1,28 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ------------------------------------ VARS SIZES ----- */
+
+
+$sizeBasic : 1rem; // 16px
+$sizeBasicS : .75rem; // 12px
+
+$spaceBasic : 1.25rem; // 20px
+$spaceBasicS : .75rem; // 12px
+
+/* ----------------------------------------------- VARS WIDTH CONTENT ----- */
+
+$bgBody: $white;
+
+$widthMain: 84.2105%;
+$widthMainMax: 1140px;
+
+$contentSpace: $spaceBasic;

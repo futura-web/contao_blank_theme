@@ -1,0 +1,71 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* --------------------------------------------------------- VARIABLES IMPORT ONLY ----- */
+
+
+/* ----------------------------------------------- COLORS ----- */
+
+@import variables/_vars_colors;
+
+/* ----------------------------------------------- SIZES ----- */
+
+@import variables/_vars_sizes;
+
+/* ----------------------------------------------- HEADINGS  ----- */
+
+//@import variables/_vars_headings;
+
+/* ----------------------------------------------- TYPOGRAPHY ----- */
+
+@import variables/_vars_typography;
+
+/* ----------------------------------------------- BORDERS ----- */
+
+@import variables/_vars_borders;
+
+/* ----------------------------------------------- FORMS ----- */
+
+// @import variables/_vars_forms;
+
+/* ----------------------------------------------- CONTENT ----- */
+
+@import variables/_vars_content;
+
+/* ----------------------------------------------- HEADER ----- */
+
+@import variables/_vars_header;
+
+// /* ----------------------------------------------- CONTAINER SPACE TOP ----- */
+
+// @import variables/_vars_container_space_top;
+
+// /* ----------------------------------------------- EVENTS ----- */
+
+@import variables/_vars_events;
+
+// /* ----------------------------------------------- BUTTONS ----- */
+
+//@import variables/_vars_buttons;
+
+// /* ----------------------------------------------- FOOTER ----- */
+
+@import variables/_vars_footer;
+
+// /* ----------------------------------------------- COOKIE ----- */
+
+//@import variables/_vars_cookie;
+
+/* ----------------------------------------------- AUTOSCROLL ----- */
+
+//@import variables/_vars_autoscroll;
+
+/* --------------------------------------------------------- VARIABLES IMPORT END ----- */

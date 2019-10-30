@@ -1,0 +1,43 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*
+*/
+
+/* --------------------------------------------------------- SLIDER ----- */
+
+.ce_sliderStart{
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-wrapper{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 2;
+
+	> .block{
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    align-items: center;
+		margin: 0;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 0;
+        opacity: 0;
+	}
+}
+
+/* --------------------------------------------------------- SLIDER END ----- */

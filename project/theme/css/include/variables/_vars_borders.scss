@@ -1,0 +1,18 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ----------------------------------------------- VARS BORDERS ----- */
+
+$colorBorder: $colorPrimary;
+$colorBorderFocus: blue;
+$colorBorderError: $colorError;
+$border: .5px solid $colorBorder;
+$borderRadius: .1875rem; // 3px

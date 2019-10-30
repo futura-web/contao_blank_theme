@@ -1,0 +1,58 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ----------------------------------------------- VARS FONTS ----- */
+
+$colorText: $black;
+
+$lineHeightText: 1.6;
+
+$sizeText: $sizeBasic;
+$marginText: $spaceBasic;
+
+$sizeTextS: $sizeBasicS;
+$marginTextS: $spaceBasicS;
+
+
+$fontSize: $sizeBasic;
+$fontSizeS: $sizeBasicS;
+
+
+$sizeFont: $sizeBasic;
+$sizeFontS: $sizeBasicS;
+
+$contentSpace: $spaceBasic;
+
+$fontFamSerif: "Times New Roman", serif;
+$fontFamSansSerif: "Helvetica Neue", "Helvetica", sans-serif;
+$fontForm: $fontFamSerif;
+
+/* ------------------------------------ VARS HEADINGS ----- */
+
+$colorH: $black;
+
+$sizeH1: initial;
+$sizeH2: initial;
+$sizeH3: initial;
+$sizeH4: initial;
+$sizeH5: initial;
+$sizeH6: initial;
+
+$lineHeightH: initial;
+
+$marginH: $spaceBasic;
+
+$marginH1: $spaceBasic;
+$marginH2: $spaceBasic;
+$marginH3: $spaceBasic;
+$marginH4: $spaceBasic;
+$marginH5: $spaceBasic;
+$marginH6: $spaceBasic;

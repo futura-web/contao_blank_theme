@@ -1,0 +1,148 @@
+
+/* --------------------------------------------------------- CE_EVENT ----- */
+
+[class*="layout_"]{
+	margin-bottom: $spaceBasic;
+	position: relative;
+
+	&:last-of-type{
+		margin: 0;
+	}
+
+	.more{
+		margin: 0;
+		position: relative;
+	}
+
+
+	&:not(.last){
+		padding-bottom: $spaceBasic;
+		margin-bottom: $spaceBasic;
+	}
+
+	.info{
+		margin-bottom: $spaceBasic;
+	}
+}
+
+
+.calendar{
+	width: 100%;
+	font-size: $sizeText;
+	text-align: center;
+
+	th, td{
+		padding: 1rem 0;
+		border: 1px solid $colorBorder;
+		overflow: hidden;
+	}
+
+	th{
+		font-size: $sizeTextS;
+
+		span{
+			display: none;
+		}
+	}
+
+	.previous,
+	.next{
+
+		a{
+			font-size: $sizeTextS;
+			text-transform: inherit;
+
+			&::before{
+				content: "<";
+				display: block;
+				font-size: $sizeText;
+			}
+		}
+	}
+
+	.next{
+
+		a{
+
+			&::before{
+				content: ">";
+			}
+		}
+	}
+
+	.label{
+		width: 14.2857142857%;
+	}
+
+	.event{
+		height: $heightEvent;
+		display: block;
+		margin-top: -$sizeBasic;
+		position: relative;
+		z-index: 2;
+
+		a{
+			width: 100%;
+			height: 275%;
+			display: block;
+			color: $transpa;
+			position: absolute;
+			top: -105%;
+			left: 0;
+		}
+	}
+
+	.active{
+		color: $colorWhite;
+		background-color: $bgLinkEvent;
+		transition: background-color ease-out 0.35s;
+
+		&:hover{
+			background-color: $bgLinkHoverEvent;
+		}
+	}
+}
+
+.minicalendar{
+	width: 100%;
+	font-size: $sizeText;
+	text-align: center;
+
+	th{
+		font-size: $sizeTextS;
+	}
+
+	th, td{
+		padding: $sizeText 0;
+		border: 1px solid $colorBorder;
+	}
+
+	.label{
+		width: 14.2857142857%;
+	}
+
+	.active{
+		padding: 0;
+		background-color: $bgLinkEvent;
+
+		a{
+			display: block;
+			color: $colorLink;
+			padding: 1rem 0;
+		}
+	}
+}
+
+.mod_eventlist{
+
+	.empty{
+		font-size: $sizeText;
+		margin-bottom: $basicSize;
+	}
+}
+
+.upcoming{
+	padding-bottom: $basicSize;
+	margin-bottom: $basicSize;
+	position: relative;
+}

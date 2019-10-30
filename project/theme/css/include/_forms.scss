@@ -1,0 +1,280 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ----------------------------------------------- VARS BORDERS ----- */
+
+$colorBorder: $colorPrimary;
+$colorBorderFocus: blue;
+$colorBorderError: $colorError;
+$border: .5px solid $colorBorder;
+$borderRadius: .1875rem; // 3px
+
+/* ----------------------------------------------- VARS FORMS ----- */
+
+$formElementHeight: $sizeBasic * 2;
+$formFont: $fontFamSerif;
+$sizeLabel: $sizeBasic;
+$formWidthMax: inherit;
+$inputPadding: .5rem;
+$borderForm: .5px solid $colorBorder;
+$bgForm: $white;
+
+/* --------------------------------------------------------- FORMS ----- */
+
+fieldset{
+
+	&:not(.radio_container){
+		padding: 0 0 $spaceBasicS;
+	}
+}
+
+legend{
+	font-size: $sizeTextS;
+	font-weight: bold;
+	margin: 0 0 $spaceBasicS;
+
+	&:empty{
+		display: none; // Capcha legend is empty :-/
+	}
+}
+
+.widget{
+	width: 100%;
+	display: block;
+	margin-bottom: $spaceBasicS;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+label{
+	width: 100%;
+	display: block;
+	line-height: 1.2;
+	font-size: $sizeLabel;
+	margin-bottom: $spaceBasicS;
+	cursor: pointer;
+}
+
+.text,
+.textarea,
+.submit,
+.captcha,
+select.select,
+select.multiselect,
+.widget-upload label{
+	width: 100%;
+	height: $formElementHeight;
+	display: block;
+	padding: 0 $inputPadding;
+	font-family: $formFont;
+	font-size: $sizeLabel;
+	border: $borderForm;
+	background: none;
+	background-color: $bgForm;
+	border-radius: $borderRadius;
+	transition: border .3s ease .1s;
+}
+
+.text,
+.textarea,
+.submit,
+.captcha,
+select.select,
+select.multiselect{
+
+	&:focus{
+		border-color: $colorBorderFocus;
+	}
+
+	.error &{
+		border-color: $colorBorderError;
+	}
+}
+
+.checkbox_container{
+	padding: 0 0 $spaceBasicS;
+
+	label{
+		width: auto;
+		display: inline-block;
+		vertical-align: baseline;
+	}
+}
+
+.submit{
+	margin: 0;
+	cursor: pointer;
+}
+
+.text,
+.textarea{
+
+	&:hover{
+		cursor: text;
+	}
+}
+
+.textarea{
+	min-height: $spaceBasic * 10;
+	padding: $inputPadding;
+}
+
+.checkbox,
+.radio{
+	width: auto;
+	vertical-align: baseline;
+	margin: 0 $spaceBasic * .25 0 0;
+}
+
+.widget-radio,
+.widget-checkbox{
+	padding: 0 0 $spaceBasic;
+
+	fieldset{
+		padding: 0;
+	}
+
+	legend{
+		font-size: $sizeBasic;
+		font-weight: normal;
+		margin: 0 0 $sizeBasicS;
+	}
+
+	div{
+		display: block;
+		height: 1.5rem;
+		line-height: 1.5rem;
+		margin: 0 0 $sizeBasicS;
+	}
+
+	label{
+		width: auto;
+		display: inline;
+	}
+}
+
+.widget-upload{
+	width: 100%;
+	height: $formElementHeight;
+	display: flex;
+	margin: 0 0 $spaceBasic;
+	position: relative;
+	overflow: hidden;
+	border: $border;
+	border-radius: $borderRadius;
+
+	label,
+	a{
+		width: auto;
+		line-height: $formElementHeight;
+		margin: 0;
+		font-family: $formFont;
+		font-size: $fontSize;
+		position: relative;
+		z-index: 1;
+		border: 0;
+		background-color: $bgForm;
+	}
+
+	&.error{
+
+		label{
+			border-color: $colorError;
+		}
+	}
+
+	&.file_attached{
+		opacity: .5;
+
+		a{
+		}
+	}
+}
+
+.text_loaded{
+	display: none;
+}
+
+.upload{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 2;
+	background-color: $bgForm;
+	cursor: pointer;
+}
+
+.delete_file{
+	z-index: 3;
+	display: none;
+	font-size: $sizeFont;
+	margin: 0 0 calc($sizeFont * .25);
+
+	.file_attached &{
+		display: flex;
+		z-index: 3;
+	}
+}
+
+
+
+select.select,
+select.multiselect{
+	padding: 0;
+	background: none;
+	background-color: $bgForm;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+}
+
+select.multiselect{
+
+	&:focus,
+	&:checked{
+		height: auto;
+	}
+
+	option{
+		height: $formElementHeight;
+	}
+}
+
+option{
+	display: block;
+	background-color: $transpa;
+}
+
+.submit_container{
+	padding: 0 0 $spaceBasic 0;
+}
+
+.error{
+
+	input,
+	select{
+		border-color: $colorError;
+	}
+
+	Legend,
+	label,
+	option{
+		color: $colorError;
+	//	margin: 0 0 $spaceBasicS;
+	}
+
+}

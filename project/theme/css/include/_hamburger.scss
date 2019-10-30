@@ -1,0 +1,117 @@
+/*
+
+    Hamburgers
+    @description Tasty CSS-animated hamburgers
+    @author Jonathan Suh @jonsuh
+    @site https://jonsuh.com/hamburgers
+    @link https://github.com/jonsuh/hamburgers
+
+    trans.less_ed and than scss_ed back again
+    by Dinko Skopljak @FuturaWebWZBG
+    Why? Because Stefan Schulz-Lauterbach said so! Schwein!
+    @site https://futura-web.de
+    @mail ds@futura-web.de
+
+*/
+
+/* --------------------------------------------------------- HAMBURGER INITAL ----- */
+
+.hamburger{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition-property: opacity, -webkit-filter;
+    transition-property: opacity, filter;
+    transition-property: opacity, filter, -webkit-filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+
+    &:hover{
+        opacity: .7;
+    }
+
+    p{
+        margin: -2px 0 0;
+    }
+
+    span{
+        display: none;
+    }
+}
+
+.hamburger-box{
+    width: 40px;
+    height: 100%;
+    position: relative;
+}
+
+.hamburger-inner{
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+
+    &::before,
+    &::after{
+    content: "";
+        display: block;
+    }
+
+    &::before{
+        top: -10px;
+    }
+
+    &::after{
+        bottom: -10px;
+    }
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after{
+    width: 40px;
+    height: 4px;
+    background-color: $colorHamburger;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+@import hamburgers/ham_3dx;
+/*
+@import hamburgers/ham_squeeze;
+@import hamburgers/ham_vortex;
+@import hamburgers/ham_vortex_reverse;
+@import hamburgers/ham_stand;
+@import hamburgers/ham_stand_reverse;
+@import hamburgers/ham_squeeze;
+@import hamburgers/ham_spring_reverse;
+@import hamburgers/ham_spring;
+@import hamburgers/ham_spin_reverse;
+@import hamburgers/ham_spin;
+@import hamburgers/ham_3dx_reverse;
+@import hamburgers/ham_3dy;
+@import hamburgers/ham_3dy_reverse;
+@import hamburgers/ham_arrow_alt_right;
+@import hamburgers/ham_arrow_alt;
+@import hamburgers/ham_arrow_right;
+@import hamburgers/ham_arrow;
+@import hamburgers/ham_boring;
+@import hamburgers/ham_collapse_reverse;
+@import hamburgers/ham_collapse;
+@import hamburgers/ham_elastic_reverse;
+@import hamburgers/ham_elastic;
+@import hamburgers/ham_empathic_reverse;
+@import hamburgers/ham_empathic;
+@import hamburgers/ham_slider_reverse;
+@import hamburgers/ham_slider;
+*/

@@ -1,0 +1,41 @@
+/* --------------------------------------------------------- HAMBURGER 3DY ----- */
+
+.hamburger--3dy{
+
+  .hamburger-box{
+    -webkit-perspective: 80px;
+            perspective: 80px;
+  }
+
+  .hamburger-inner{
+    transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &::before,
+    &::after{
+      transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  }
+
+  &.active{
+
+    .hamburger-inner{
+      background-color: transparent;
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg); 
+
+      &::before{
+        -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+                transform: translate3d(0, 10px, 0) rotate(45deg);
+      }
+
+      &::after{
+        -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+                transform: translate3d(0, -10px, 0) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/* --------------------------------------------------------- HAMBURGER SLIDER ----- */
+
+.hamburger--slider{
+
+  .hamburger-inner {
+    top: 2px;
+
+    &::before{
+      top: 10px;
+      transition-property: opacity, -webkit-transform;
+      transition-property: transform, opacity;
+      transition-property: transform, opacity, -webkit-transform;
+      transition-timing-function: ease;
+      transition-duration: 0.2s;
+    }
+
+    &::after {
+      top: 20px;
+    }
+  }
+
+  &.active{
+
+    .hamburger-inner{
+      -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+              transform: translate3d(0, 10px, 0) rotate(45deg);
+
+      &::before {
+        -webkit-transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+                transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0;
+      }
+
+      &::after {
+        -webkit-transform: translate3d(0, -20px, 0) rotate(-90deg);
+                transform: translate3d(0, -20px, 0) rotate(-90deg);
+      }
+    }
+  }
+}

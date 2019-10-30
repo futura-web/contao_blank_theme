@@ -1,0 +1,78 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*/
+
+/* ------------------------------------ VARS AUTOSCROLL ----- */
+
+$bgAutoScroll: fadeout($colorPrimary, 60%);
+$colorAutoScrollArrow: $white;
+
+/* --------------------------------------------------------- AUTOSCROLL -> TOP ----- */
+
+#to_top{
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background-color: $bgAutoScroll;
+	border: 1px solid $transpa;
+	border-radius: $borderRadius;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity .2s ease .1s;
+	z-index: 1000;
+
+	&.out{
+		width: 40px;
+		height: 40px;
+		opacity: 1;
+	}
+
+
+	span{
+		height: 40px;
+		width: 40px;
+		color: $transpa;
+		font-size: 0;
+		line-height: 0;
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		&::before,
+		&::after{
+			content: "";
+			width: 21px;
+			height: 7px;
+			display: block;
+			position: absolute;
+			background-color: $colorAutoScrollArrow;
+		}
+
+		&::before{
+			top: 16px;
+			left: 3.5px;
+		    -ms-transform: rotate(-45deg);
+		    -webkit-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		}
+
+		&::after{
+			top: 16px;
+			right: 5.5px;
+		    -ms-transform: rotate(45deg);
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}
+	}
+}
