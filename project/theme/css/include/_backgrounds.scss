@@ -16,3 +16,12 @@
         z-index: -1;
     }
 }
+
+// Usage:
+
+.bg_white {
+
+    &::after {
+        background-color: $white;
+    }
+}

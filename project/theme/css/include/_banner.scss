@@ -1,0 +1,63 @@
+/*
+*
+*	C4 INITIAL –  blank theme for CONTAO CMS
+*
+*	author	Dinko Skopljak
+*	web		https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	powered by SCSS https://sass-lang.com/
+*
+*/
+
+/* --------------------------------------------------------- BANNER ----- */
+
+    &.banner {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        >.block {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            position: static;
+        }
+
+        .image_container {
+            width: 102%;
+            height: 102%;
+            position: absolute;
+            top: -1%;
+            left: -1%;
+            z-index: -1;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            max-width: inherit;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            max-width: $widthMain;				// css -> include -> variables -> _vars_content
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+/* --------------------------------------------------------- BANNER END ----- */

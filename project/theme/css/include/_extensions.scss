@@ -37,3 +37,24 @@
 	position: absolute !important;
 	width: 1px;
 }
+
+%parallax_single_img {
+	height: 50vh;
+	min-height: inherit;
+
+	.image_container {
+		position: relative;
+		transition: transform linear .15s;
+	}
+
+	img{
+		top: 0;
+		transform: translateX(-50%);
+		opacity: 0;
+		
+		&.done{
+			opacity: 1;
+			transition: all .2s cubic-bezier(.4,-0.20,.65,1.5) .15s;
+		}
+	}
+}
