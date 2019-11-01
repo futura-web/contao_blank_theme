@@ -163,7 +163,8 @@ body{
     //background-color: $bgNavMain;				// css -> include -> variables -> _vars_header
     z-index: 1;
 
-    &.out{
+	&.out,
+	&:target{
 	    transform: translate3d(0, 0, 0);
 	}
 
@@ -245,73 +246,10 @@ body{
 
 .mod_article{
 
-    &.banner {
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-        position: relative;
-        overflow: hidden;
-        z-index: 2;
+	@import include/_banner;
 
-        >.block {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            position: static;
-        }
+	@import include/_parallax_single_img;
 
-        .image_container {
-            width: 102%;
-            height: 102%;
-            position: absolute;
-            top: -1%;
-            left: -1%;
-            z-index: -1;
-        }
-
-        img {
-            width: auto;
-            height: auto;
-            min-width: 100%;
-            min-height: 100%;
-            max-width: inherit;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            max-width: $widthMain;				// css -> include -> variables -> _vars_content
-            margin-left: auto;
-            margin-right: auto;
-        }
-	}
-
-	&.parallax_single_img {
-		height: 50vh;
-		min-height: inherit;
-	
-		.image_container {
-			transition: transform linear .15s;
-		}
-
-		img{
-			top: 0;
-			transform: translateX(-50%);
-			opacity: 0;
-			
-			&.done{
-				opacity: 1;
-				transition: opacity .2s linear .15s;
-			}
-		}
-	}
 }
 
 /* --------------------------------------------------------- MAIN END ----- */
@@ -360,15 +298,6 @@ body{
 /* --------------------------------------------------------- FLEXIBLE BACKGROUNDS ----- */
 
 //@import include/_backgrounds;
-
-// Usage:
-
-// .bg_gray {
-
-//     &::after {
-//         background-color: $gray;
-//     }
-// }
 
 /* --------------------------------------------------------- FLEXIBLE BACKGROUNDS END ----- */
 
